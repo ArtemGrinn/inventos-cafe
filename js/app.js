@@ -3,6 +3,7 @@
   
   var data = {};
   var contentContainer = document.querySelector('.content');
+  var categoriesContainer  = document.querySelector('.categories');
 
   window.onload = function(){
     sendRequest('http://helenj.myjino.ru/meals.js', 'GET', main);
@@ -10,12 +11,9 @@
 
   function main(response){
       data = JSON.parse(response);
-
-      var categories = document.querySelector('.categories');
-      categories.innerHTML = '';
-      categories.appendChild(createCategories(data.categories));
-
       
+      categoriesContainer.innerHTML = '';
+      categoriesContainer.appendChild(createCategories(data.categories));
   }
 
   function createCategories(ctgs){
