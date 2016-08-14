@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invetos Cafe</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/account.css">
+    </head>
+    <body>
+        <header>
+            <h1>Inventos Cafe</h1>
+        </header>
+        <div class="content">         
+          <form class="form">
+            <header class="form__header">Оформить заказ</header>
+            <fieldset class="form__fieldset">
+              <div class="form__line">
+                <label class="form__label">Имя и фамилия</label>
+                <input type="text" name="name" class="form__input"/>
+              </div>
+              <div class="form__line">
+                <label class="form__label">Телефон</label>
+                <input type="email" name="tel" class="form__input" />
+              </div>
+              <div class="form__line">
+                <label class="form__label"></label>
+                <input type="submit" class="form__submit" value="" onclick="localStorage.removeItem('inventos-kafe-order')">
+              </div>
+              <div class="form__line">
+                <label class="form__label"></label>
+                <div class="form__hint">Пожалуйста, заполните все поля.</div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+    </body>
+</html>

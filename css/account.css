@@ -1,0 +1,67 @@
+body{
+  font-family: PT Sans, Helvetica, sans-serif;
+}
+.form{
+  margin: 22px;
+}
+.form__header{
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  padding-left: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.form__header:before{
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 0;
+  background: url('../img/arrow.png') no-repeat;
+}
+
+.form__fieldset{
+  display: table;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 40px;
+  font-size: 18px;
+}
+.form__line{
+  display: table-row;
+}
+.form__label{
+  display: table-cell;
+  padding-right: 25px;
+}
+.form__input{
+  display: table-cell;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 24px;
+  width: 260px;
+  border: solid 1px rgb(192,192,192);
+  border-radius: 4px;
+  box-shadow: inset rgba(192,192,192,0.3) 0px 4px 10px;
+}
+.form__submit{
+  background: url('../img/btn.png') no-repeat;
+  border: none;
+  width: 186px;
+  height: 69px;
+  cursor: pointer;
+  outline: none;
+}
+.form__submit:hover{
+  background-position-y: -139px;
+}
+.form__submit:active{
+  background-position-y: -69px;
+}
+.form__hint{
+  margin-top: 15px;
+  color: rgb(176, 176, 176);
+  font-size: 14px;
+  font-weight: 100;
+}

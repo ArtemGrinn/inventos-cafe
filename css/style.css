@@ -2,49 +2,54 @@ body{
   font-family: Helvetica, sans-serif;
   font-size: 18px;
 }
-
 a{
   color: #2B587A;
+  margin-right: 10px;
 }
 
-.label, .selected-meal{
+.category__label, .category__meal{
   display: inline-block;
   margin: 10px 10px 10px 0;
   text-transform: capitalize;
   min-width: 100px;
 }
-
+.back-btn{
+  display: block;
+}
 .meal{
   display: inline-block;
   padding: 10px;
   margin: 10px;
 }
-.meal header{
+.meal__header{
   text-transform: capitalize;
   font-weight: 700;
 }
-.meal video{
+.meal__video{
   display: block;
-  background: #aaa;
+  background: lightgoldenrodyellow;
 }
-.meal .price{
+.meal__price{
   display: inline-block;
   color: orangered;
 }
-.meal a{
+.meal__link{
   float: right;
 }
 
-button.next{
+.next{
+  display: inline-block;
+  text-decoration: none;
   margin-top: 20px;
   border: solid 1px gold;
   border-radius: 4px;
+  color: black;
   background: gold;
   padding: 15px 40px;
   font-size: 18px;
   cursor: pointer;
 }
-button.next:hover{
+.next:hover{
   border: solid 1px lightgoldenrodyellow;
   background: lightgoldenrodyellow;
 }
