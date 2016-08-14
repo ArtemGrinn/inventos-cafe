@@ -1,0 +1,51 @@
+body{
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+a{
+  color: #2B587A;
+}
+
+.label, .selected-meal{
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  text-transform: capitalize;
+  min-width: 100px;
+}
+
+.meal{
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+.meal header{
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.meal video{
+  display: block;
+  background: #aaa;
+}
+.meal .price{
+  display: inline-block;
+  color: orangered;
+}
+.meal a{
+  float: right;
+}
+
+button.next{
+  margin-top: 20px;
+  border: solid 1px gold;
+  border-radius: 4px;
+  background: gold;
+  padding: 15px 40px;
+  font-size: 18px;
+  cursor: pointer;
+}
+button.next:hover{
+  border: solid 1px lightgoldenrodyellow;
+  background: lightgoldenrodyellow;
+}
+
