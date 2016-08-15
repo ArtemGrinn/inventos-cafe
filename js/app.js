@@ -86,10 +86,6 @@
 
   function showMeals(id){
     contentContainer.innerHTML = '';
-    var filtered = Data.meals.filter(function(meal){
-      return meal.category_id == id;
-    });
-    
     var backBtn = document.createElement('a');
     backBtn.className = 'back-btn';
     backBtn.href='#';
@@ -99,17 +95,37 @@
       showCategories();
     });
     contentContainer.appendChild(backBtn);
+    
+    var mealsContainer = document.createElement('div');
+    var input = document.createElement('input');
+    input.className = 'meal-filter__input';
+    input.placeholder = 'Найти';
+    input.addEventListener('input', function(){
+      createMeals(id, mealsContainer, input.value);
+    });    
+    contentContainer.appendChild(input);
+
+    createMeals(id, mealsContainer);
+    contentContainer.appendChild(mealsContainer);
+  }
+
+  function createMeals(id, container, filter=''){ 
+    container.innerHTML = ''; 
+    var filtered = Data.meals.filter(function(meal){
+      return meal.category_id == id && ~meal.name.toLowerCase().indexOf(filter.toLowerCase());
+    });
 
     [].forEach.call(filtered, function(item){
       var mealElement = createMeal(item);
-      contentContainer.appendChild(mealElement);
-    });
+      container.appendChild(mealElement);
+    }); 
   }
+
 
   function createMeal(mealParams){
       var wrapper = document.createElement('div');
       wrapper.setAttribute('data-id', mealParams.id);
-      wrapper.classList.add('meal');
+      wrapper.className = 'meal';
 
       var header = document.createElement('header');
       header.className = 'meal__header';
